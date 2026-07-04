@@ -11,7 +11,7 @@ statusLine:
   sessionAccent: true
   transparent: false
   compactThinkingLevel: false
-defaultThinkingLevel: high
+defaultThinkingLevel: xhigh
 memory:
   backend: mnemopi
 autolearn:
