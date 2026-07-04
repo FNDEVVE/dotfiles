@@ -11,7 +11,7 @@ statusLine:
   sessionAccent: true
   transparent: false
   compactThinkingLevel: false
-defaultThinkingLevel: high
+defaultThinkingLevel: xhigh
 memory:
   backend: mnemopi
 autolearn:
@@ -33,8 +33,8 @@ task:
   agentModelOverrides:
     explore: devin/gemini-3-5-flash
     librarian: devin/gemini-3-5-flash
-    sonic: openai-codex/gpt-5.5:low
-    designer: devin/claude-5-fable-medium
+    sonic: devin/glm-5-2
+    designer: devin/gemini-3-5-flash:high
     Tester: openai-codex/gpt-5.5:xhigh
 commands:
   enableOpencodeUser: false
@@ -94,60 +94,52 @@ disabledExtensions:
   - rule:rs-result-type
   - skill:ponytail-review
 enabledProviders:
+  - zai
+  - devin
   - openai-codex
   - anthropic
-  - devin
-  - zai
 enabledModels:
-  - openai-codex/gpt-5.5
-  - openai-codex/gpt-5.4-mini
-  - anthropic/claude-fable-5
-  - anthropic/claude-opus-4-8
+  - zai/glm-5.2
+  - devin/gemini-3-5-flash
   - devin/glm-5-2
   - devin/kimi-k2-7
-  - devin/claude-5-fable-xhigh
-  - devin/claude-5-fable-high
-  - devin/claude-5-fable-medium
-  - devin/claude-sonnet-5-high
-  - devin/gemini-3-5-flash
-  - zai/glm-5.2
+  - openai-codex/gpt-5.5
+  - openai-codex/gpt-5.4-mini
+  - anthropic/claude-opus-4-8
 modelRoles:
-  default: devin/claude-5-fable-high
-  slow: devin/claude-5-fable-xhigh
-  plan: devin/claude-5-fable-xhigh
-  task: openai-codex/gpt-5.5:medium
-  smol: openai-codex/gpt-5.5:low
+  default: zai/glm-5.2:xhigh
+  slow: zai/glm-5.2:xhigh
+  plan: zai/glm-5.2:xhigh
+  task: devin/glm-5-2
+  smol: devin/glm-5-2
   advisor: openai-codex/gpt-5.5:xhigh
   tiny: devin/gemini-3-5-flash
   commit: devin/gemini-3-5-flash:low
-  vision: devin/claude-5-fable-medium
+  vision: devin/gemini-3-5-flash:high
 retry:
   enabled: true
   modelFallback: true
   fallbackRevertPolicy: cooldown-expiry
   fallbackChains:
     default:
-      - openai-codex/gpt-5.5:xhigh
-      - zai/glm-5.2:xhigh
       - devin/glm-5-2
+      - devin/gemini-3-5-flash
+      - openai-codex/gpt-5.5:xhigh
       - anthropic/claude-opus-4-8:xhigh
       - devin/kimi-k2-7
     slow:
-      - openai-codex/gpt-5.5:xhigh
-      - zai/glm-5.2:xhigh
       - devin/glm-5-2
+      - devin/gemini-3-5-flash
+      - openai-codex/gpt-5.5:xhigh
       - anthropic/claude-opus-4-8:xhigh
       - devin/kimi-k2-7
     plan:
+      - devin/glm-5-2
       - openai-codex/gpt-5.5:xhigh
-      - zai/glm-5.2:xhigh
-      - devin/glm-5-2
       - anthropic/claude-opus-4-8:xhigh
-      - devin/kimi-k2-7
     task:
-      - devin/claude-5-fable-medium
-      - zai/glm-5.2:xhigh
-      - devin/glm-5-2
+      - devin/gemini-3-5-flash:medium
+      - openai-codex/gpt-5.5:xhigh
       - anthropic/claude-opus-4-8:xhigh
       - devin/kimi-k2-7
     advisor:
@@ -156,17 +148,14 @@ retry:
       - anthropic/claude-opus-4-8:xhigh
       - devin/kimi-k2-7
     tiny:
-      - openai-codex/gpt-5.4-mini
-      - devin/kimi-k2-7
       - devin/glm-5-2
+      - devin/kimi-k2-7
     smol:
-      - openai-codex/gpt-5.4-mini
-      - devin/kimi-k2-7
       - devin/glm-5-2
+      - devin/kimi-k2-7
     commit:
-      - openai-codex/gpt-5.4-mini
-      - devin/kimi-k2-7
       - devin/glm-5-2
+      - devin/kimi-k2-7
     vision:
       - anthropic/claude-opus-4-8:xhigh
       - openai-codex/gpt-5.5:medium
@@ -205,15 +194,13 @@ display:
 dev:
   autoqa:
     consent: granted
-snapcompact:
-  toolResults: false
 tui:
   renderMermaid: false
   tight: true
   hyperlinks: always
 compaction:
   handoffSaveToDisk: true
-  strategy: snapcompact
+  strategy: default
 mnemopi:
   enhancedRecall: true
   polyphonicRecall: true

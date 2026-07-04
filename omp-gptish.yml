@@ -11,7 +11,7 @@ statusLine:
   sessionAccent: true
   transparent: false
   compactThinkingLevel: false
-defaultThinkingLevel: high
+defaultThinkingLevel: xhigh
 memory:
   backend: mnemopi
 autolearn:
@@ -101,51 +101,44 @@ enabledProviders:
 enabledModels:
   - openai-codex/gpt-5.5
   - openai-codex/gpt-5.4-mini
-  - anthropic/claude-fable-5
   - anthropic/claude-opus-4-8
   - devin/glm-5-2
   - devin/kimi-k2-7
-  - devin/claude-5-fable-xhigh
-  - devin/claude-5-fable-high
   - devin/claude-5-fable-medium
   - devin/claude-sonnet-5-high
   - devin/gemini-3-5-flash
   - zai/glm-5.2
 modelRoles:
-  default: devin/claude-5-fable-high
-  slow: devin/claude-5-fable-xhigh
-  plan: devin/claude-5-fable-xhigh
+  default: openai-codex/gpt-5.5:xhigh
+  slow: openai-codex/gpt-5.5:xhigh
+  plan: openai-codex/gpt-5.5:xhigh
   task: openai-codex/gpt-5.5:medium
   smol: openai-codex/gpt-5.5:low
   advisor: openai-codex/gpt-5.5:xhigh
   tiny: devin/gemini-3-5-flash
   commit: devin/gemini-3-5-flash:low
-  vision: devin/claude-5-fable-medium
+  vision: openai-codex/gpt-5.5:xhigh
 retry:
   enabled: true
   modelFallback: true
   fallbackRevertPolicy: cooldown-expiry
   fallbackChains:
     default:
-      - openai-codex/gpt-5.5:xhigh
       - zai/glm-5.2:xhigh
       - devin/glm-5-2
-      - anthropic/claude-opus-4-8:xhigh
       - devin/kimi-k2-7
+      - anthropic/claude-opus-4-8:xhigh
     slow:
-      - openai-codex/gpt-5.5:xhigh
       - zai/glm-5.2:xhigh
       - devin/glm-5-2
       - anthropic/claude-opus-4-8:xhigh
       - devin/kimi-k2-7
     plan:
-      - openai-codex/gpt-5.5:xhigh
       - zai/glm-5.2:xhigh
       - devin/glm-5-2
       - anthropic/claude-opus-4-8:xhigh
       - devin/kimi-k2-7
     task:
-      - devin/claude-5-fable-medium
       - zai/glm-5.2:xhigh
       - devin/glm-5-2
       - anthropic/claude-opus-4-8:xhigh
@@ -169,7 +162,6 @@ retry:
       - devin/glm-5-2
     vision:
       - anthropic/claude-opus-4-8:xhigh
-      - openai-codex/gpt-5.5:medium
       - devin/kimi-k2-7
 browser:
   headless: true
