@@ -128,30 +128,30 @@ retry:
   fallbackChains:
     default:
       - openai-codex/gpt-5.5:xhigh
-      - zai/glm-5.2
+      - zai/glm-5.2:xhigh
       - devin/glm-5-2
       - anthropic/claude-opus-4-8:xhigh
       - devin/kimi-k2-7
     slow:
       - openai-codex/gpt-5.5:xhigh
-      - zai/glm-5.2
+      - zai/glm-5.2:xhigh
       - devin/glm-5-2
       - anthropic/claude-opus-4-8:xhigh
       - devin/kimi-k2-7
     plan:
       - openai-codex/gpt-5.5:xhigh
-      - zai/glm-5.2
+      - zai/glm-5.2:xhigh
       - devin/glm-5-2
       - anthropic/claude-opus-4-8:xhigh
       - devin/kimi-k2-7
     task:
       - devin/claude-5-fable-medium
-      - zai/glm-5.2
+      - zai/glm-5.2:xhigh
       - devin/glm-5-2
       - anthropic/claude-opus-4-8:xhigh
       - devin/kimi-k2-7
     advisor:
-      - zai/glm-5.2
+      - zai/glm-5.2:xhigh
       - devin/glm-5-2
       - anthropic/claude-opus-4-8:xhigh
       - devin/kimi-k2-7
