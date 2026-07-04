@@ -108,12 +108,11 @@ enabledModels:
   - devin/claude-5-fable-xhigh
   - devin/claude-5-fable-high
   - devin/claude-5-fable-medium
-  - devin/claude-sonnet-5-high
   - devin/gemini-3-5-flash
   - zai/glm-5.2
 modelRoles:
   default: devin/claude-5-fable-high
-  slow: devin/claude-5-fable-xhigh
+  slow: openai-codex/gpt-5.5:xhigh
   plan: devin/claude-5-fable-xhigh
   task: openai-codex/gpt-5.5:medium
   smol: openai-codex/gpt-5.5:low
@@ -133,7 +132,6 @@ retry:
       - anthropic/claude-opus-4-8:xhigh
       - devin/kimi-k2-7
     slow:
-      - openai-codex/gpt-5.5:xhigh
       - zai/glm-5.2:xhigh
       - devin/glm-5-2
       - anthropic/claude-opus-4-8:xhigh
