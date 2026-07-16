@@ -1,0 +1,8 @@
+providers:
+  kimi-code:
+    modelOverrides:
+      k3:
+        thinking:
+          mode: effort
+          efforts:
+            - max
