@@ -156,6 +156,7 @@ display:
 statusLine:
   preset: nerd
   separator: powerline
+  compactThinkingLevel: false
 composer:
   shape: rule
   tokenRate: true
@@ -172,7 +173,7 @@ spelling:
   autocomplete: ngram
 colorBlindMode: false
 claudeResets:
-  autoRedeem: unset
+  autoRedeem: "no"
 disabledProviders:
   - claude-plugins
   - agent-plugins
