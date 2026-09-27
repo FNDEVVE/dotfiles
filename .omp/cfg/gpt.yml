@@ -1,0 +1,9 @@
+modelRoles:
+  default: openai-codex/gpt-6-astra:auto
+  plan: openai-codex/gpt-6-astra:auto
+  slow: openai-codex/gpt-6-astra:auto
+  task: openai-codex/gpt-6-astra:auto
+  smol: openai-codex/gpt-6-luna:auto
+  reader_fast: openai-codex/gpt-6-luna:auto
+  writer_cheap: openai-codex/gpt-6-luna:auto
+  second_opinion: anthropic/claude-opus-5-5:auto

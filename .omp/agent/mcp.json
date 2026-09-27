@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/can1357/oh-my-pi/main/packages/coding-agent/src/config/mcp-schema.json",
+  "mcpServers": {
+    "grepapp": {
+      "type": "http",
+      "url": "https://mcp.grep.app"
+    },
+    "axiom": {
+      "type": "http",
+      "url": "https://mcp.axiom.co/mcp",
+      "auth": {
+        "type": "oauth"
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+modelRoles:
+  default: merge/deepseek-v4.1-flash-merge-particle:high
+  plan: zai/glm-5.3:auto
+  slow: zai/glm-5.3:auto
+  task: merge/deepseek-v4.1-flash-merge-particle:high
+  worker_alt: zai/glm-5.3:auto
+cycleOrder:
+  - default
+  - slow
+  - task
+  - worker_alt
+  - smol
