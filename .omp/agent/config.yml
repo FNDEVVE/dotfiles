@@ -62,9 +62,11 @@ retry:
   fallbackChains:
     anthropic/claude-opus-5-5:
       - anthropic/claude-fable-5-1
+      - openai-codex/gpt-6-astra
       - zai/glm-5.3
     anthropic/claude-fable-5-1:
       - anthropic/claude-opus-5-5
+      - openai-codex/gpt-6-astra
       - zai/glm-5.3
     openai-codex/gpt-6-astra:
       - openai-codex/gpt-6-sol
