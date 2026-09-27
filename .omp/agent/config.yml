@@ -75,7 +75,7 @@ retry:
     openai-codex/gpt-6-luna:
       - muse-code/muse-spark-1.3-contributor
       - google-antigravity/gemini-3.8-flash
-      - merge/deepseek-v4.1-flash-merge
+      - merge/deepseek-v4.1-flash-merge-particle:low
     google-antigravity/gemini-3.8-flash:
       - merge/deepseek-v4.1-flash-merge-particle:low
       - zai/glm-5.3-flash:auto
