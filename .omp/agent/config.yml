@@ -23,7 +23,7 @@ modelRoles:
   web: web/exa
   judge: typesafe/jev-latest
   reader_fast: merge/deepseek-v4.1-flash-merge-particle:low
-  reader_cheap: zai/glm-5.3-flash:auto
+  reader_cheap: google-antigravity/gemini-3.8-flash:auto
   writer_cheap: zai/glm-5.3-flash:auto
   worker_alt: zai/glm-5.3:max
   second_opinion: zai/glm-5.3:auto
@@ -64,28 +64,30 @@ retry:
       - anthropic/claude-fable-5-1
       - zai/glm-5.3
     anthropic/claude-fable-5-1:
+      - anthropic/claude-opus-5-5
+      - zai/glm-5.3
+    openai-codex/gpt-6-astra:
+      - openai-codex/gpt-6-sol
+      - anthropic/claude-opus-5-5
+    openai-codex/gpt-6-sol:
       - zai/glm-5.3
       - anthropic/claude-opus-5-5
-    openai-codex/gpt-6-astra:
-      - openai-codex/gpt-6-sol:xhigh
-      - anthropic/claude-opus-5-5:high
-    openai-codex/gpt-6-sol:
-      - zai/glm-5.3:max
     openai-codex/gpt-6-luna:
-      - openai-codex/gpt-5.6-luna
-      - merge/deepseek-v4.1-flash-merge-particle
-      - opencode-go/gpt-5.6-luna
+      - muse-code/muse-spark-1.3-contributor
+      - google-antigravity/gemini-3.8-flash
+      - merge/deepseek-v4.1-flash-merge
     google-antigravity/gemini-3.8-flash:
       - merge/deepseek-v4.1-flash-merge-particle:low
+      - zai/glm-5.3-flash:auto
+      - muse-code/muse-spark-1.3-contributor:auto
     merge/deepseek-v4.1-flash-merge-particle:
       - ollama-cloud/deepseek-v4.1-flash
       - opencode-go/deepseek-v4.1-flash
-    muse-code/muse-spark-1.3-contributor:
-      - opencode-zen/muse-spark-1.3-contributor-free
-      - opencode-go/muse-spark-1.3-contributor
+      - google-antigravity/gemini-3.8-flash
     zai/glm-5.3:
       - zai/glm-5.3-flash:max
     zai/glm-5.3-flash:
+      - google-antigravity/gemini-3.8-flash
       - ollama-cloud/glm-5.3-flash
     commit:
       []
