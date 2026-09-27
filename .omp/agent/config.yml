@@ -14,7 +14,7 @@ modelRoles:
   default: anthropic/claude-opus-5-5:auto
   plan: anthropic/claude-fable-5-1:auto
   slow: anthropic/claude-opus-5-5:auto
-  task: zai/glm-5.3:auto
+  task: anthropic/claude-opus-5-5:auto
   smol: merge/deepseek-v4.1-flash-merge-particle:low
   tiny: zai/glm-5.3-flash:low
   vision: zai/glm-5.3-flash:low
