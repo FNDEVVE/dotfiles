@@ -152,7 +152,7 @@ display:
   cacheMissMarker: true
   shimmer: kitt
   pinnedAgents: full
-  hideToolActivity: true
+  hideToolActivity: false
 statusLine:
   preset: nerd
   separator: powerline
