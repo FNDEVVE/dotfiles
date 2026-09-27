@@ -56,6 +56,8 @@ providers:
   openrouterVariant: floor
   autoThinkingMaxEffort: max
   fetch: firecrawl
+  anthropic:
+    slowMode: auto
 retry:
   fallbackChains:
     anthropic/claude-opus-5-5:
