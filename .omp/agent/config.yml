@@ -26,7 +26,7 @@ modelRoles:
   reader_cheap: google-antigravity/gemini-3.8-flash:auto
   writer_cheap: zai/glm-5.3-flash:auto
   worker_alt: zai/glm-5.3:max
-  second_opinion: openai-codex/gpt-6-astra:auto
+  second_opinion: openai-codex/gpt-6.1-sol:auto
 cycleOrder:
   - default
   - plan
@@ -62,14 +62,14 @@ retry:
   fallbackChains:
     anthropic/claude-opus-5-5:
       - anthropic/claude-fable-5-1
-      - openai-codex/gpt-6-astra
+      - openai-codex/gpt-6.1-sol
       - zai/glm-5.3
     anthropic/claude-fable-5-1:
       - anthropic/claude-opus-5-5
-      - openai-codex/gpt-6-astra
+      - openai-codex/gpt-6.1-sol
       - zai/glm-5.3
     openai-codex/gpt-6-astra:
-      - openai-codex/gpt-6-sol
+      - openai-codex/gpt-6.1-sol
       - anthropic/claude-opus-5-5
     openai-codex/gpt-6-sol:
       - zai/glm-5.3
