@@ -2,7 +2,7 @@ modelRoles:
   default: zai/glm-5.3:auto
   slow: zai/glm-5.3:auto
   task: merge/glm-5.3-flash-merge-particle:auto
-  smol: google-antigravity/gemini-3.5-flash-lite:low
+  smol: google-antigravity/gemini-3.8-flash:auto
   advisor: merge/glm-5.3-flash-merge-particle:low
   reader_fast: merge/deepseek-v4.1-flash-merge-particle:low
   reader_cheap: merge/glm-5.3-flash-merge-particle:low
