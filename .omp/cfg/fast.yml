@@ -1,17 +1,18 @@
 modelRoles:
-  default: muse-code/muse-spark-1.3-contributor:medium
-  slow: zai/glm-5.3:high
-  task: merge/deepseek-v4.1-flash-merge-particle:low
-  advisor: zai/glm-5.3-flash:low
-  reader_cheap: zai/glm-5.3-flash:low
-  writer_cheap: zai/glm-5.3-flash:low
-  worker_alt: muse-code/muse-spark-1.3-contributor:high
-  second_opinion: zai/glm-5.3:high
+  default: zai/glm-5.3:auto
+  slow: zai/glm-5.3:auto
+  task: merge/glm-5.3-flash-merge-particle:auto
+  smol: google-antigravity/gemini-3.5-flash-lite:low
+  advisor: merge/glm-5.3-flash-merge-particle:low
+  reader_fast: merge/deepseek-v4.1-flash-merge-particle:low
+  reader_cheap: merge/glm-5.3-flash-merge-particle:low
+  writer_cheap: merge/glm-5.3-flash-merge-particle:auto
+  worker_alt: zai/glm-5.3:max
+  second_opinion: zai/glm-5.3:auto
 cycleOrder:
   - default
   - task
-  - slow
-  - smol
   - worker_alt
+  - smol
 task:
   softRequestBudget: 100
