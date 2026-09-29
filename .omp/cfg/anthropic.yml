@@ -1,5 +1,5 @@
 modelRoles:
   task: anthropic/claude-sonnet-5-5:auto
   smol: anthropic/claude-sonnet-5-5:auto
-  advisor: zai/glm-5.3:auto
+  advisor: anthropic/claude-fable-5-1:medium
   second_opinion: zai/glm-5.3:auto

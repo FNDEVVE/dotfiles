@@ -19,7 +19,7 @@ modelRoles:
   tiny: merge/deepseek-v4.1-flash-merge-particle:low
   vision: zai/glm-5.3-flash:low
   commit: zai/glm-5.3-flash:low
-  advisor: openai-codex/gpt-6-astra:auto
+  advisor: anthropic/claude-fable-5-1:medium
   web: web/exa
   judge: typesafe/jev-latest
   reader_fast: merge/deepseek-v4.1-flash-merge-particle:low
