@@ -14,9 +14,9 @@ modelRoles:
   default: anthropic/claude-opus-5-5:auto
   plan: anthropic/claude-fable-5-1:auto
   slow: anthropic/claude-opus-5-5:auto
-  task: anthropic/claude-sonnet-5-5:auto
-  smol: merge/deepseek-v4.1-flash-merge-particle:low
-  tiny: zai/glm-5.3-flash:low
+  task: anthropic/claude-opus-5-5:auto
+  smol: anthropic/claude-sonnet-5-5:auto
+  tiny: merge/deepseek-v4.1-flash-merge-particle:low
   vision: zai/glm-5.3-flash:low
   commit: zai/glm-5.3-flash:low
   advisor: openai-codex/gpt-6-astra:auto
