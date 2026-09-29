@@ -14,12 +14,12 @@ modelRoles:
   default: anthropic/claude-opus-5-5:auto
   plan: anthropic/claude-fable-5-1:auto
   slow: anthropic/claude-opus-5-5:auto
-  task: anthropic/claude-sonnet-5-5:auto
-  smol: anthropic/claude-sonnet-5-5:auto
+  task: anthropic/claude-opus-5-5:auto
+  smol: openai-codex/gpt-6.1-sol:auto
   tiny: merge/deepseek-v4.1-flash-merge-particle:low
   vision: zai/glm-5.3-flash:low
   commit: zai/glm-5.3-flash:low
-  advisor: anthropic/claude-fable-5-1:medium
+  advisor: openai-codex/gpt-6.1-sol:medium
   web: web/exa
   judge: typesafe/jev-latest
   reader_fast: merge/deepseek-v4.1-flash-merge-particle:low
@@ -48,7 +48,7 @@ task:
     scout: "@reader_fast"
     sonic: "@writer_cheap"
     reviewer: "@second_opinion"
-    security-reviewer: "@slow"
+    security-reviewer: "@second_opinion"
   agentServiceTierOverrides:
     task: priority
     sonic: priority
@@ -68,16 +68,9 @@ retry:
       - anthropic/claude-opus-5-5
       - openai-codex/gpt-6.1-sol
       - zai/glm-5.3
-    openai-codex/gpt-6-astra:
-      - openai-codex/gpt-6.1-sol
+    openai-codex/gpt-6.1-sol:
       - anthropic/claude-opus-5-5
-    openai-codex/gpt-6-sol:
       - zai/glm-5.3
-      - anthropic/claude-sonnet-5-5
-    openai-codex/gpt-6-luna:
-      - muse-code/muse-spark-1.3-contributor
-      - google-antigravity/gemini-3.8-flash
-      - merge/deepseek-v4.1-flash-merge-particle:low
     google-antigravity/gemini-3.8-flash:
       - merge/deepseek-v4.1-flash-merge-particle:low
       - zai/glm-5.3-flash:auto
