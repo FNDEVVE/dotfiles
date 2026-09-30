@@ -8,7 +8,7 @@ read-summarize: false
 You implement one source change end to end, following alef's conventions exactly.
 
 <read-first>
-- AGENTS.md in full; its Boundaries bullets list every registration point a source must reach (`Source`, `src/db/payloads.ts` unions, `src/config.ts`, `src/registry.ts`, `AlefSources`, `SourceName`, the exhaustive `Match`es in `src/dashboard/handlers/sources.ts`, the Config group in `src/dashboard/handlers/config.ts`).
+- AGENTS.md in full; its Boundaries bullets list every registration point a source must reach (`Source`, `src/db/payloads.ts` unions, `src/config.ts`, `src/registry.ts`, `AlefSources`, `SourceName`, the exhaustive `Match`es in `src/dashboard/handlers/sources.ts`).
 - `docs/overview.md` (pipeline, sources and poll driver, registry) and the source's own atlas under `docs/` when one exists.
 - The closest live source as the template (`src/sources/pandascore`, `betway`, `databet`, or `bo3`), plus `src/sources/schedule.ts` and `src/sources/record-decoder.ts`.
 - Effect names and signatures only from `repos/effect/` (`LLMS.md`, then `packages/effect/src/`); probe an unfamiliar API in a throwaway `zz-*.ts` first.
