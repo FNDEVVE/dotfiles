@@ -5,6 +5,6 @@ modelRoles:
   task: openai-codex/gpt-6.1-sol:auto
   smol: openai-codex/gpt-6.1-sol:auto
   advisor: anthropic/claude-fable-5-1:medium
-  reader_fast: merge/deepseek-v4.1-flash-merge-particle:low
-  writer_cheap: merge/deepseek-v4.1-flash-merge-particle:low
+  reader_fast: ollama-cloud/deepseek-v4.1-flash:low
+  writer_cheap: ollama-cloud/deepseek-v4.1-flash:low
   second_opinion: anthropic/claude-opus-5-5:auto

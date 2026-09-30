@@ -1,12 +1,12 @@
 modelRoles:
   default: zai/glm-5.3-flash:max
   slow: zai/glm-5.3:auto
-  task: merge/glm-5.3-flash-merge-particle:auto
+  task: zai/glm-5.3-flash:auto
   smol: google-antigravity/gemini-3.8-flash:auto
-  advisor: merge/glm-5.3-flash-merge-particle:low
-  reader_fast: merge/deepseek-v4.1-flash-merge-particle:low
+  advisor: zai/glm-5.3-flash:auto
+  reader_fast: ollama-cloud/deepseek-v4.1-flash:low
   reader_cheap: google-antigravity/gemini-3.8-flash:auto
-  writer_cheap: merge/glm-5.3-flash-merge-particle:auto
+  writer_cheap: zai/glm-5.3-flash:auto
   worker_alt: zai/glm-5.3:max
   second_opinion: zai/glm-5.3:auto
 cycleOrder:

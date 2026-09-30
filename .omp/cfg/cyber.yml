@@ -1,8 +1,8 @@
 modelRoles:
-  default: merge/deepseek-v4.1-flash-merge-particle:high
+  default: ollama-cloud/deepseek-v4.1-flash:high
   plan: zai/glm-5.3:auto
   slow: zai/glm-5.3:auto
-  task: merge/deepseek-v4.1-flash-merge-particle:high
+  task: ollama-cloud/deepseek-v4.1-flash:auto
   worker_alt: zai/glm-5.3:auto
 cycleOrder:
   - default
