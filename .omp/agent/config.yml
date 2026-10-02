@@ -82,9 +82,9 @@ retry:
     zai/glm-5.3:
       - zai/glm-5.3-flash:max
     zai/glm-5.3-flash:
+      - google-antigravity/gemini-3.8-flash
       - merge/glm-5.3-flash-merge-particle
       - ollama-cloud/glm-5.3-flash
-      - google-antigravity/gemini-3.8-flash
     commit:
       []
     judge:
