@@ -1,0 +1,34 @@
+{
+  "attribution": {
+    "commit": "",
+    "pr": "",
+    "sessionUrl": false
+  },
+  "permissions": {
+    "defaultMode": "auto"
+  },
+  "model": "opus[1m]",
+  "enabledPlugins": {
+    "typescript-lsp@claude-plugins-official": true,
+    "cowork-plugin-management@synced": false,
+    "telemetry@builtin": false,
+    "claude-md-management@claude-plugins-official": true,
+    "cloudflare@claude-plugins-official": true,
+    "taste-skill@taste-skill": true,
+    "interfaces@local-desktop-app-uploads": true,
+    "plannotator@plannotator": true
+  },
+  "extraKnownMarketplaces": {
+    "plannotator": {
+      "source": {
+        "source": "github",
+        "repo": "backnotprop/plannotator"
+      }
+    }
+  },
+  "tui": "fullscreen",
+  "skipWorkflowUsageWarning": true,
+  "theme": "auto",
+  "autoCompactEnabled": false,
+  "switchModelsOnFlag": false
+}

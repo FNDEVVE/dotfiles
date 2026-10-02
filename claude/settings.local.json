@@ -1,0 +1,25 @@
+{
+  "skillOverrides": {
+    "anthropic-skills:docs": "off",
+    "anthropic-skills:docx": "off",
+    "faceless-explainer": "off",
+    "general-video": "off",
+    "hyperframes": "off",
+    "hyperframes-animation": "off",
+    "hyperframes-audio": "off",
+    "hyperframes-cli": "off",
+    "hyperframes-core": "off",
+    "hyperframes-creative": "off",
+    "hyperframes-keyframes": "off",
+    "hyperframes-registry": "off",
+    "hyperframes-studio": "off",
+    "anthropic-skills:import-memory": "off",
+    "media-use": "off",
+    "anthropic-skills:morning": "off",
+    "anthropic-skills:pdf": "off",
+    "anthropic-skills:pptx": "off",
+    "pr-to-video": "off",
+    "anthropic-skills:skill-creator": "off",
+    "anthropic-skills:xlsx": "off"
+  }
+}
