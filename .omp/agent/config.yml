@@ -58,6 +58,8 @@ providers:
   fetch: firecrawl
   anthropic:
     slowMode: auto
+  maxInFlightRequests:
+    zai: 8
 retry:
   fallbackChains:
     anthropic/claude-opus-5-5:
