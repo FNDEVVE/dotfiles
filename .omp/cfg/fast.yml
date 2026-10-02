@@ -1,5 +1,5 @@
 modelRoles:
-  default: zai/glm-5.3-flash:max
+  default: zai/glm-5.3:auto
   slow: zai/glm-5.3:auto
   task: zai/glm-5.3-flash:auto
   smol: google-antigravity/gemini-3.8-flash:auto
