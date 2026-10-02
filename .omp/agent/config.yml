@@ -176,3 +176,5 @@ disabledProviders:
   - claude
   - builtin-defaults
   - omp-managed
+tier:
+  openai: priority

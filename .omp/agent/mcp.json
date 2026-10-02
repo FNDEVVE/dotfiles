@@ -11,6 +11,10 @@
       "auth": {
         "type": "oauth"
       }
+    },
+    "cloudflare": {
+      "type": "http",
+      "url": "https://mcp.cloudflare.com/mcp"
     }
   }
 }
