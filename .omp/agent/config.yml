@@ -15,16 +15,16 @@ modelRoles:
   plan: anthropic/claude-fable-5-1:auto
   slow: anthropic/claude-opus-5-5:auto
   task: anthropic/claude-opus-5-5:auto
-  smol: openai-codex/gpt-6.1-sol:auto
-  tiny: ollama-cloud/deepseek-v4.1-flash:low
+  smol: anthropic/claude-haiku-5-5:auto
+  tiny: anthropic/claude-haiku-5-5:auto
   vision: zai/glm-5.3-flash:low
   commit: zai/glm-5.3-flash:low
   advisor: openai-codex/gpt-6.1-sol:medium
   web: web/exa
   judge: typesafe/jev-latest
-  reader_fast: ollama-cloud/deepseek-v4.1-flash:low
+  reader_fast: anthropic/claude-haiku-5-5:auto
   reader_cheap: google-antigravity/gemini-3.8-flash:auto
-  writer_cheap: zai/glm-5.3-flash:auto
+  writer_cheap: anthropic/claude-haiku-5-5:auto
   worker_alt: zai/glm-5.3:max
   second_opinion: openai-codex/gpt-6.1-sol:auto
 cycleOrder:
