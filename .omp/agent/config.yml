@@ -15,17 +15,17 @@ modelRoles:
   plan: anthropic/claude-fable-5-1:auto
   slow: anthropic/claude-opus-5-5:auto
   task: anthropic/claude-opus-5-5:auto
-  smol: anthropic/claude-haiku-5-5:auto
+  smol: anthropic/claude-sonnet-5-5:auto
   tiny: anthropic/claude-haiku-5-5:auto
   vision: zai/glm-5.3-flash:low
   commit: zai/glm-5.3-flash:low
-  advisor: openai-codex/gpt-6.1-sol:medium
+  advisor: openai-codex/gpt-6.1-sol:high
   web: web/exa
   judge: typesafe/jev-latest
   reader_fast: anthropic/claude-haiku-5-5:auto
-  reader_cheap: google-antigravity/gemini-3.8-flash:auto
+  reader_cheap: anthropic/claude-haiku-5-5:auto
   writer_cheap: anthropic/claude-haiku-5-5:auto
-  worker_alt: zai/glm-5.3:max
+  worker_alt: openai-codex/gpt-6.1-sol:auto
   second_opinion: openai-codex/gpt-6.1-sol:auto
 cycleOrder:
   - default
@@ -52,26 +52,33 @@ task:
   agentServiceTierOverrides:
     task: priority
     sonic: priority
+  maxConcurrency: 64
+  softRequestBudget: 200
+  maxEffort: xhigh
 providers:
   openrouterVariant: floor
-  autoThinkingMaxEffort: max
+  autoThinkingMaxEffort: xhigh
   fetch: firecrawl
   anthropic:
     slowMode: auto
   maxInFlightRequests:
     zai: 8
+  openai-codex:
+    codeMode: auto
 retry:
   fallbackChains:
     anthropic/claude-opus-5-5:
       - anthropic/claude-fable-5-1
+      - anthropic/claude-sonnet-5-5
       - openai-codex/gpt-6.1-sol
       - zai/glm-5.3
     anthropic/claude-fable-5-1:
       - anthropic/claude-opus-5-5
-      - openai-codex/gpt-6.1-sol
+      - openai-codex/gpt-6-astra
       - zai/glm-5.3
     openai-codex/gpt-6.1-sol:
       - anthropic/claude-opus-5-5
+      - anthropic/claude-sonnet-5-5
       - zai/glm-5.3
     google-antigravity/gemini-3.8-flash:
       - ollama-cloud/deepseek-v4.1-flash:low
@@ -93,7 +100,7 @@ retry:
       - typesafe/jev-preview
       - openrouter/~typesafe/jev-latest
 compaction:
-  thresholdPercent: 40
+  thresholdPercent: 30
   handoffSaveToDisk: true
   keepRecentTokens: 60000
   experimentalContextManagement: true
@@ -149,6 +156,7 @@ display:
   shimmer: kitt
   pinnedAgents: full
   hideToolActivity: false
+  subagentLivePreview: true
 statusLine:
   preset: nerd
   separator: powerline
@@ -180,3 +188,15 @@ disabledProviders:
   - omp-managed
 tier:
   openai: priority
+  advisor: priority
+tui:
+  autoGraph: smart
+  codexResetFireworks: true
+emojiAutocomplete: false
+recap:
+  idleSeconds: 600
+eval:
+  autoBackground:
+    enabled: true
+codexResets:
+  autoRedeem: "no"
