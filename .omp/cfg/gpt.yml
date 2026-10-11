@@ -1,5 +1,5 @@
 modelRoles:
-  default: openai-codex/gpt-6.1-sol:auto
+  default: openai-codex/gpt-6-astra:auto
   plan: openai-codex/gpt-6.1-sol:auto
   slow: openai-codex/gpt-6.1-sol:auto
   task: openai-codex/gpt-6.1-sol:auto
