@@ -90,6 +90,11 @@ retry:
       - ollama-cloud/deepseek-v4.1-flash:low
       - zai/glm-5.3-flash:auto
       - muse-code/muse-spark-1.3-contributor:auto
+    merge/*:
+      - muse-code/muse-spark-1.3-contributor
+      - openai-codex/gpt-6.1-sol
+      - zai/glm-5.3-flash
+      - google-antigravity/gemini-3.8-flash
     ollama-cloud/deepseek-v4.1-flash:
       - opencode-go/deepseek-v4.1-flash
       - merge/deepseek-v4.1-flash-merge-particle
