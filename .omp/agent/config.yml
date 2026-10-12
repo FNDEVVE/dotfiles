@@ -23,9 +23,9 @@ modelRoles:
   web: web/exa
   judge: typesafe/jev-latest
   reader_fast: anthropic/claude-haiku-5-5:auto
-  reader_cheap: anthropic/claude-haiku-5-5:auto
+  reader_cheap: ollama-cloud/deepseek-v4.1-flash:low
   writer_cheap: anthropic/claude-haiku-5-5:auto
-  worker_alt: openai-codex/gpt-6.1-sol:auto
+  worker_alt: ollama-cloud/deepseek-v4.1-flash:auto
   second_opinion: openai-codex/gpt-6.1-sol:auto
 cycleOrder:
   - default
@@ -93,13 +93,17 @@ retry:
     ollama-cloud/deepseek-v4.1-flash:
       - opencode-go/deepseek-v4.1-flash
       - merge/deepseek-v4.1-flash-merge-particle
+      - muse-code/muse-spark-1.3-contributor
       - google-antigravity/gemini-3.8-flash
     zai/glm-5.3:
+      - muse-code/muse-spark-1.3-contributor
       - zai/glm-5.3-flash:max
+      - google-antigravity/gemini-3.8-flash
     zai/glm-5.3-flash:
       - google-antigravity/gemini-3.8-flash
-      - merge/glm-5.3-flash-merge-particle
       - ollama-cloud/glm-5.3-flash
+      - ollama-cloud/deepseek-v4.1-flash
+      - merge/glm-5.3-flash-merge-particle
     commit:
       []
     judge:
