@@ -49,9 +49,6 @@ task:
     sonic: "@writer_cheap"
     reviewer: "@second_opinion"
     security-reviewer: "@second_opinion"
-  agentServiceTierOverrides:
-    task: priority
-    sonic: priority
   maxConcurrency: 64
   softRequestBudget: 200
   maxEffort: xhigh
@@ -215,9 +212,6 @@ disabledProviders:
   - claude
   - builtin-defaults
   - omp-managed
-tier:
-  openai: priority
-  advisor: priority
 tui:
   autoGraph: smart
   codexResetFireworks: true
