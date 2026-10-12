@@ -6,10 +6,10 @@ modelRoles:
   worker_alt: zai/glm-5.3:auto
   second_opinion: zai/glm-5.3:max
   advisor: zai/glm-5.3:high
-  smol: zai/glm-5.3-flash:low
-  reader_fast: zai/glm-5.3-flash:low
-  reader_cheap: zai/glm-5.3-flash:low
-  writer_cheap: zai/glm-5.3-flash:auto
+  smol: zai/glm-5.3-flashx:low
+  reader_fast: zai/glm-5.3-flashx:low
+  reader_cheap: zai/glm-5.3-flashx:low
+  writer_cheap: zai/glm-5.3-flashx:auto
   vision: muse-code/muse-spark-1.3-contributor:auto
 
 cycleOrder:
@@ -25,3 +25,10 @@ task:
     reviewer: "@second_opinion"
     security-reviewer: "@slow"
     investigator: "@slow"
+
+retry:
+  fallbackChains:
+    merge/*:
+      - muse-code/muse-spark-1.3-contributor
+      - zai/glm-5.3-flashx
+      - google-antigravity/gemini-3.8-flash

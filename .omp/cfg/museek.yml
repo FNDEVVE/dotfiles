@@ -5,7 +5,7 @@ modelRoles:
   task: ollama-cloud/deepseek-v4.1-flash:auto
   worker_alt: muse-code/muse-spark-1.3-contributor:auto
   second_opinion: zai/glm-5.3:max
-  advisor: zai/glm-5.3-flash:high
+  advisor: zai/glm-5.3-flashx:high
   smol: muse-code/muse-spark-1.3-contributor:auto
   reader_fast: ollama-cloud/deepseek-v4.1-flash:auto
   reader_cheap: google-antigravity/gemini-3.8-flash
