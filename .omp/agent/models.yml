@@ -14,7 +14,7 @@ providers:
     apiKey: MERGE_API_KEY
     models:
       - id: deepseek-v4.1-flash-merge-particle
-        name: "(Merge/particle) - DeepSeek V4.1 Flash - 0.1/0.4/0.002"
+        name: "(M/p) - DeepSeek V4.1 Flash - 0.1/0.4/0.002"
         contextWindow: 1000000
         maxTokens: 384000
         reasoning: true
@@ -36,7 +36,7 @@ providers:
             vendor: particle
             include_routing_metadata: true
       - id: deepseek-v4.1-flash-merge-deepseek
-        name: "(Merge/deepseek) - DeepSeek V4.1 Flash - 0.15/0.6/0.003"
+        name: "(M/d) - DeepSeek V4.1 Flash - 0.15/0.6/0.003"
         contextWindow: 1000000
         maxTokens: 384000
         reasoning: true
@@ -58,7 +58,7 @@ providers:
             vendor: deepseek
             include_routing_metadata: true
       - id: glm-5.3-flash-merge-particle
-        name: "(Merge/particle) - GLM 5.3 Flash - 0.015/0.05/0.003"
+        name: "(M/p) - GLM 5.3 Flash - 0.015/0.05/0.003"
         contextWindow: 1000000
         maxTokens: 131000
         reasoning: true
@@ -74,7 +74,7 @@ providers:
             vendor: particle
             include_routing_metadata: true
       - id: glm-5.3-flash-merge-zai
-        name: "(Merge/z.ai) - GLM 5.3 Flash - 0.015/0.05/0.003"
+        name: "(M/z) - GLM 5.3 Flash - 0.015/0.05/0.003"
         contextWindow: 1000000
         maxTokens: 131000
         reasoning: true
