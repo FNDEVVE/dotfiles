@@ -25,3 +25,10 @@ task:
     reviewer: "@second_opinion"
     security-reviewer: "@slow"
     investigator: "@slow"
+
+retry:
+  fallbackChains:
+    merge/*:
+      - muse-code/muse-spark-1.3-contributor
+      - zai/glm-5.3-flash
+      - google-antigravity/gemini-3.8-flash
