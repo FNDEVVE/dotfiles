@@ -7,8 +7,8 @@ modelRoles:
   second_opinion: zai/glm-5.3:max
   advisor: zai/glm-5.3-flash:high
   smol: muse-code/muse-spark-1.3-contributor:auto
-  reader_fast: zai/glm-5.3-flash:low
-  reader_cheap: google-antigravity/gemini-3.8-flash
+  reader_fast: google-antigravity/gemini-3.8-flash
+  reader_cheap: zai/glm-5.3-flash:low
   writer_cheap: zai/glm-5.3-flash:low
   vision: muse-code/muse-spark-1.3-contributor:auto
 
