@@ -1,16 +1,16 @@
 modelRoles:
-  default: muse-code/muse-wonder-full-1.0-contributor:max
+  default: muse-code/muse-wonder-1.0-contributor:medium
   plan: muse-code/muse-wonder-full-1.0-contributor:max
-  slow: muse-code/muse-wonder-full-1.0-contributor:max
-  task: muse-code/muse-wonder-full-1.0-contributor:max
+  slow: muse-code/muse-wonder-full-1.0-contributor:auto
+  task: muse-code/muse-wonder-1.0-contributor:auto
   worker_alt: zai/glm-5.3:max
   second_opinion: zai/glm-5.3:max
   advisor: zai/glm-5.3-flashx:high
-  smol: muse-code/muse-wonder-1.0-contributor:auto
+  smol: muse-code/muse-wonder-1.0-contributor:low
   reader_fast: google-antigravity/gemini-3.8-flash
   reader_cheap: zai/glm-5.3-flashx:low
   writer_cheap: zai/glm-5.3-flashx:low
-  vision: muse-code/muse-wonder-1.0-contributor:auto
+  vision: muse-code/muse-wonder-1.0-contributor:medium
 
 cycleOrder:
   - default
@@ -29,6 +29,6 @@ task:
 retry:
   fallbackChains:
     merge/*:
-      - muse-code/muse-wonder-full-1.0-contributor:max
+      - muse-code/muse-wonder-1.0-contributor:high
       - zai/glm-5.3-flashx
       - google-antigravity/gemini-3.8-flash

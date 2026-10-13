@@ -10,14 +10,14 @@ followUpMode: all
 interruptMode: wait
 doubleEscapeAction: tree
 modelRoles:
-  default: anthropic/claude-opus-5-5:auto
+  default: anthropic/claude-opus-5-5:medium
   plan: anthropic/claude-fable-5-1:auto
   slow: anthropic/claude-opus-5-5:auto
   task: anthropic/claude-opus-5-5:auto
   smol: anthropic/claude-sonnet-5-5:auto
   tiny: anthropic/claude-haiku-5-5:auto
-  vision: zai/glm-5.3-flashx:low
-  commit: zai/glm-5.3-flashx:low
+  vision: anthropic/claude-haiku-5-5:auto
+  commit: anthropic/claude-haiku-5-5:auto
   advisor: openai-codex/gpt-6.1-sol:high
   web: web/exa
   judge: typesafe/jev-latest
@@ -63,10 +63,10 @@ providers:
 retry:
   fallbackChains:
     anthropic/claude-opus-5-5:
-      - muse-code/muse-wonder-full-1.0-contributor:max
+      - muse-code/muse-wonder-1.0-contributor
       - anthropic/claude-fable-5-1
-      - anthropic/claude-sonnet-5-5
       - openai-codex/gpt-6-astra
+      - anthropic/claude-sonnet-5-5
       - zai/glm-5.3
     anthropic/claude-fable-5-1:
       - muse-code/muse-wonder-full-1.0-contributor:max
@@ -74,53 +74,55 @@ retry:
       - openai-codex/gpt-6-astra
       - zai/glm-5.3
     anthropic/claude-sonnet-5-5:
+      - muse-code/muse-wonder-1.0-contributor
       - openai-codex/gpt-6.1-sol
       - zai/glm-5.3
     anthropic/claude-haiku-5-5:
-      - muse-code/muse-wonder-1.0-contributor:max
       - google-antigravity/gemini-3.8-flash
       - ollama-cloud/deepseek-v4.1-flash
+    openai-codex/gpt-6-astra:
+      - muse-code/muse-wonder-1.0-contributor:high
+      - zai/glm-5.3
     openai-codex/gpt-6.1-sol:
       - anthropic/claude-opus-5-5
       - anthropic/claude-sonnet-5-5
       - zai/glm-5.3
     google-antigravity/gemini-3.8-flash:
       - ollama-cloud/deepseek-v4.1-flash:low
+      - muse-code/muse-wonder-1.0-contributor
       - zai/glm-5.3-flashx:auto
       - zai/glm-5.3-flash:auto
-      - muse-code/muse-wonder-1.0-contributor
     merge/*:
       - anthropic/claude-opus-5-5
       - anthropic/claude-sonnet-5-5
       - openai-codex/gpt-6.1-sol
-      - muse-code/muse-wonder-full-1.0-contributor
+      - muse-code/muse-wonder-1.0-contributor
       - zai/glm-5.3-flashx
       - zai/glm-5.3-flash
       - google-antigravity/gemini-3.8-flash
     ollama-cloud/deepseek-v4.1-flash:
       - opencode-go/deepseek-v4.1-flash
       - merge/deepseek-v4.1-flash-merge-particle
-      - muse-code/muse-wonder-full-1.0-contributor
+      - muse-code/muse-wonder-1.0-contributor
       - openai-codex/gpt-6.1-sol
       - zai/glm-5.3-flashx
       - zai/glm-5.3-flash
       - google-antigravity/gemini-3.8-flash
     zai/glm-5.3:
-      - muse-code/muse-wonder-full-1.0-contributor:max
+      - muse-code/muse-wonder-1.0-contributor
+      - openai-codex/gpt-6.1-sol
+      - anthropic/claude-sonnet-5-5
       - zai/glm-5.3-flashx:max
       - zai/glm-5.3-flash:max
-      - openai-codex/gpt-6.1-sol
       - google-antigravity/gemini-3.8-flash
     zai/glm-5.3-flash:
       - google-antigravity/gemini-3.8-flash
       - ollama-cloud/glm-5.3-flash
       - ollama-cloud/deepseek-v4.1-flash
-      - merge/glm-5.3-flash-merge-particle
     zai/glm-5.3-flashx:
       - google-antigravity/gemini-3.8-flash
       - ollama-cloud/glm-5.3-flash
       - ollama-cloud/deepseek-v4.1-flash
-      - merge/glm-5.3-flash-merge-particle
     judge:
       - typesafe/jev-preview
       - openrouter/~typesafe/jev-latest

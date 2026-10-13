@@ -1,7 +1,7 @@
 modelRoles:
-  default: zai/glm-5.3:auto
+  default: anthropic/claude-sonnet-5-5:medium
   slow: zai/glm-5.3:auto
-  task: zai/glm-5.3-flashx:auto
+  task: anthropic/claude-haiku-5-5:medium
   smol: google-antigravity/gemini-3.8-flash:auto
   advisor: zai/glm-5.3-flashx:auto
   reader_fast: ollama-cloud/deepseek-v4.1-flash:low
