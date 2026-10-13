@@ -5,7 +5,6 @@ theme:
   light: light-monochrome
 defaultThinkingLevel: auto
 extendedContext: true
-readLineNumbers: false
 steeringMode: all
 followUpMode: all
 interruptMode: wait
@@ -50,7 +49,6 @@ task:
     reviewer: "@second_opinion"
     security-reviewer: "@second_opinion"
   maxConcurrency: 64
-  softRequestBudget: 200
   maxEffort: xhigh
 providers:
   openrouterVariant: floor
@@ -123,8 +121,6 @@ retry:
       - ollama-cloud/glm-5.3-flash
       - ollama-cloud/deepseek-v4.1-flash
       - merge/glm-5.3-flash-merge-particle
-    commit:
-      []
     judge:
       - typesafe/jev-preview
       - openrouter/~typesafe/jev-latest
@@ -133,8 +129,6 @@ compaction:
   handoffSaveToDisk: true
   keepRecentTokens: 60000
   experimentalContextManagement: true
-branchSummary:
-  enabled: false
 checkpoint:
   enabled: true
 memory:
@@ -163,11 +157,6 @@ github:
   enabled: true
 generate_image:
   enabled: true
-read:
-  renderMarkdown: false
-  summarize:
-    prose: false
-  toolResultPreview: false
 todo:
   eager: preferred
 commands:
@@ -184,7 +173,6 @@ display:
   cacheMissMarker: true
   shimmer: kitt
   pinnedAgents: full
-  hideToolActivity: false
   subagentLivePreview: true
 statusLine:
   preset: nerd
@@ -201,10 +189,6 @@ plan:
 textVerbosity: low
 find:
   enabled: "on"
-spelling:
-  typoDetection: true
-  autocomplete: ngram
-colorBlindMode: false
 claudeResets:
   autoRedeem: "no"
 disabledProviders:
@@ -216,7 +200,6 @@ disabledProviders:
   - builtin-defaults
   - omp-managed
 tui:
-  autoGraph: smart
   codexResetFireworks: true
 emojiAutocomplete: false
 recap:
