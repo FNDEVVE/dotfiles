@@ -183,6 +183,7 @@ composer:
   tokenRate: true
 browser:
   screenshotDir: ~/Desktop/OMPSS
+  cmux: false
 plan:
   autosave: true
   autosaveDir: ~/Desktop/OMPPP
@@ -209,3 +210,5 @@ eval:
     enabled: true
 codexResets:
   autoRedeem: "no"
+bash:
+  gitGuard: true
