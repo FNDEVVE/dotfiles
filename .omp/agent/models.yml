@@ -24,6 +24,18 @@ providers:
         thinking:
           mode: effort
           efforts: [minimal, low, medium, high, xhigh, max]
+  opencode-go:
+    # Workaround (omp 18.10.4): gemini-4-argon-contributor is discovered as
+    # openai-completions -> 400 ModelProtocolUnsupported. The gateway serves it
+    # only via Gemini-native generateContent, and only on /inference/go
+    # (/zen/go 404s that path). Remove once omp pins the route upstream.
+    baseUrl: https://opencode.ai/inference/go/v1
+    modelOverrides:
+      gemini-4-argon-contributor:
+        api: google-generative-ai
+        thinking:
+          mode: effort
+          efforts: [low, medium, high]
   merge:
     baseUrl: https://api-gateway.merge.dev/v1
     api: openai-completions
