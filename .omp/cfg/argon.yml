@@ -7,8 +7,8 @@ modelRoles:
   second_opinion: openai-codex/gpt-6.1-sol:auto
   advisor: openai-codex/gpt-6.1-sol:high
   smol: opencode-go/gemini-4-argon-contributor:low
-  reader_fast: opencode-go/deepseek-v4.1-flash:low
-  reader_cheap: anthropic/claude-haiku-5-5:auto
+  reader_fast: anthropic/claude-haiku-5-5:auto
+  reader_cheap: ollama-cloud/deepseek-v4.1-flash:low
   writer_cheap: anthropic/claude-haiku-5-5:auto
   vision: anthropic/claude-haiku-5-5:auto
 
