@@ -1,0 +1,27 @@
+modelRoles:
+  default: opencode-go/gemini-4-argon-contributor:high
+  plan: opencode-go/gemini-4-argon-contributor:high
+  slow: opencode-go/gemini-4-argon-contributor:high
+  task: opencode-go/gemini-4-argon-contributor:medium
+  worker_alt: anthropic/claude-opus-5-5:medium
+  second_opinion: anthropic/claude-opus-5-5:medium
+  advisor: openai-codex/gpt-6.1-sol:high
+  smol: opencode-go/deepseek-v4.1-flash:low
+  reader_fast: opencode-go/deepseek-v4.1-flash:low
+  reader_cheap: anthropic/claude-haiku-5-5:auto
+  writer_cheap: anthropic/claude-haiku-5-5:auto
+  vision: anthropic/claude-haiku-5-5:auto
+
+cycleOrder:
+  - default
+  - slow
+  - task
+  - worker_alt
+  - smol
+
+task:
+  agentModelOverrides:
+    scout: "@reader_fast"
+    reviewer: "@second_opinion"
+    security-reviewer: "@slow"
+    investigator: "@slow"
