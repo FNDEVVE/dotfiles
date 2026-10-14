@@ -1,8 +1,8 @@
 modelRoles:
-  default: ollama-cloud/deepseek-v4.1-flash:high
+  default: opencode-go/deepseek-v4.1-flash:auto
   plan: zai/glm-5.3:auto
   slow: zai/glm-5.3:auto
-  task: ollama-cloud/deepseek-v4.1-flash:auto
+  task: opencode-go/deepseek-v4.1-flash:auto
   worker_alt: muse-code/muse-wonder-1.0-contributor
 cycleOrder:
   - default

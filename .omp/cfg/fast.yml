@@ -4,7 +4,7 @@ modelRoles:
   task: anthropic/claude-haiku-5-5:medium
   smol: google-antigravity/gemini-3.8-flash:auto
   advisor: zai/glm-5.3-flashx:auto
-  reader_fast: ollama-cloud/deepseek-v4.1-flash:low
+  reader_fast: opencode-go/deepseek-v4.1-flash:auto
   reader_cheap: google-antigravity/gemini-3.8-flash:auto
   writer_cheap: zai/glm-5.3-flashx:auto
   worker_alt: zai/glm-5.3:max
