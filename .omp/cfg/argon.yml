@@ -1,5 +1,5 @@
 modelRoles:
-  default: opencode-go/gemini-4-argon-contributor:high
+  default: opencode-go/gemini-4-argon-contributor:medium
   plan: opencode-go/gemini-4-argon-contributor:high
   slow: opencode-go/gemini-4-argon-contributor:high
   task: opencode-go/gemini-4-argon-contributor:medium
