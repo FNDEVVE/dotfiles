@@ -1,0 +1,27 @@
+modelRoles:
+  default: zai/glm-5.3-flashx:max
+  plan: zai/glm-5.3:max
+  slow: zai/glm-5.3:max
+  task: zai/glm-5.3-flashx:auto
+  worker_alt: zai/glm-5.3:auto
+  second_opinion: openai-codex/gpt-6.1-sol:auto
+  advisor: openai-codex/gpt-6.1-sol:low
+  smol: zai/glm-5.3-flashx:low
+  reader_fast: zai/glm-5.3-flashx:low
+  reader_cheap: opencode-go/cat-jam-free
+  writer_cheap: zai/glm-5.3-flashx:auto
+  vision: zai/glm-5.3-flashx:medium
+
+cycleOrder:
+  - default
+  - slow
+  - task
+  - worker_alt
+  - smol
+
+task:
+  agentModelOverrides:
+    scout: "@reader_fast"
+    reviewer: "@second_opinion"
+    security-reviewer: "@slow"
+    investigator: "@slow"

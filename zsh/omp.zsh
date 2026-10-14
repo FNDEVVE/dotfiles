@@ -5,5 +5,6 @@ alias omp-cyber='command omp --config ~/.omp/cfg/cyber.yml'
 alias omp-game='command omp --config ~/.omp/cfg/game.yml'
 alias omp-muse='command omp --config ~/.omp/cfg/muse.yml'
 alias omp-argon='command omp --config ~/.omp/cfg/argon.yml'
+alias omp-glm='command omp --config ~/.omp/cfg/glm.yml'
 
 alias claude-cpa='command claude --settings ~/.claude/cpa.json'

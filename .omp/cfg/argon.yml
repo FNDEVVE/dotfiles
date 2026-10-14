@@ -1,12 +1,12 @@
 modelRoles:
-  default: opencode-go/gemini-4-argon-contributor:medium
-  plan: opencode-go/gemini-4-argon-contributor:high
-  slow: opencode-go/gemini-4-argon-contributor:high
-  task: opencode-go/gemini-4-argon-contributor:medium
+  default: google-antigravity/gemini-4-argon:medium
+  plan: google-antigravity/gemini-4-argon:high
+  slow: google-antigravity/gemini-4-argon:high
+  task: google-antigravity/gemini-4-argon:medium
   worker_alt: anthropic/claude-opus-5-5:medium
-  second_opinion: openai-codex/gpt-6.1-sol:auto
+  second_opinion: anthropic/claude-opus-5-5:auto
   advisor: openai-codex/gpt-6.1-sol:high
-  smol: opencode-go/gemini-4-argon-contributor:low
+  smol: google-antigravity/gemini-4-argon:low
   reader_fast: anthropic/claude-haiku-5-5:auto
   reader_cheap: opencode-go/deepseek-v4.1-flash:low
   writer_cheap: anthropic/claude-haiku-5-5:auto

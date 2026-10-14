@@ -1,12 +1,12 @@
 modelRoles:
   default: anthropic/claude-sonnet-5-5:medium
   slow: zai/glm-5.3:auto
-  task: anthropic/claude-haiku-5-5:medium
-  smol: google-antigravity/gemini-3.8-flash:auto
+  task: anthropic/claude-sonnet-5-5:auto
+  smol: anthropic/claude-haiku-5-5:medium
   advisor: zai/glm-5.3-flashx:auto
   reader_fast: opencode-go/deepseek-v4.1-flash:auto
-  reader_cheap: google-antigravity/gemini-3.8-flash:auto
-  writer_cheap: zai/glm-5.3-flashx:auto
+  reader_cheap: opencode-go/cat-jam-free
+  writer_cheap: anthropic/claude-haiku-5-5:medium
   worker_alt: zai/glm-5.3:max
   second_opinion: zai/glm-5.3:auto
 cycleOrder:

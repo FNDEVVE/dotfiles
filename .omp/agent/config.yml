@@ -24,8 +24,8 @@ modelRoles:
   reader_fast: anthropic/claude-haiku-5-5:auto
   reader_cheap: opencode-go/deepseek-v4.1-flash:low
   writer_cheap: anthropic/claude-haiku-5-5:auto
-  worker_alt: ollama-cloud/deepseek-v4.1-flash:auto
-  second_opinion: openai-codex/gpt-6.1-sol:auto
+  worker_alt: google-antigravity/gemini-4-argon:auto
+  second_opinion: google-antigravity/gemini-4-argon:auto
 cycleOrder:
   - default
   - plan
@@ -62,19 +62,25 @@ providers:
     codeMode: auto
 retry:
   fallbackChains:
+    google-antigravity/gemini-4-argon:
+      - opencode-go/gemini-4-argon-contributor
+      - anthropic/claude-opus-5-5
     anthropic/claude-opus-5-5:
       - muse-code/muse-wonder-1.0-contributor
       - anthropic/claude-fable-5-1
+      - google-antigravity/gemini-4-argon
       - openai-codex/gpt-6-astra
       - anthropic/claude-sonnet-5-5
       - zai/glm-5.3
     anthropic/claude-fable-5-1:
       - muse-code/muse-wonder-full-1.0-contributor:max
       - anthropic/claude-opus-5-5
+      - google-antigravity/gemini-4-argon:high
       - openai-codex/gpt-6-astra
       - zai/glm-5.3
     anthropic/claude-sonnet-5-5:
       - muse-code/muse-wonder-1.0-contributor
+      - google-antigravity/gemini-4-argon
       - openai-codex/gpt-6.1-sol
       - zai/glm-5.3
     anthropic/claude-haiku-5-5:
@@ -82,8 +88,11 @@ retry:
       - opencode-go/deepseek-v4.1-flash:low
     openai-codex/gpt-6-astra:
       - muse-code/muse-wonder-1.0-contributor:high
+      - google-antigravity/gemini-4-argon:auto
+      - anthropic/claude-opus-5-5
       - zai/glm-5.3
     openai-codex/gpt-6.1-sol:
+      - google-antigravity/gemini-4-argon:auto
       - anthropic/claude-opus-5-5
       - anthropic/claude-sonnet-5-5
       - zai/glm-5.3
@@ -94,6 +103,7 @@ retry:
       - zai/glm-5.3-flash:auto
     merge/*:
       - anthropic/claude-opus-5-5
+      - google-antigravity/gemini-4-argon:auto
       - anthropic/claude-sonnet-5-5
       - openai-codex/gpt-6.1-sol
       - muse-code/muse-wonder-1.0-contributor
@@ -104,12 +114,14 @@ retry:
       - ollama-cloud/deepseek-v4.1-flash
       - merge/deepseek-v4.1-flash-merge-particle
       - muse-code/muse-wonder-1.0-contributor
+      - google-antigravity/gemini-4-argon
       - openai-codex/gpt-6.1-sol
       - zai/glm-5.3-flashx
       - zai/glm-5.3-flash
       - google-antigravity/gemini-3.8-flash
     zai/glm-5.3:
       - muse-code/muse-wonder-1.0-contributor
+      - google-antigravity/gemini-4-argon:auto
       - openai-codex/gpt-6.1-sol
       - anthropic/claude-sonnet-5-5
       - zai/glm-5.3-flashx:max
