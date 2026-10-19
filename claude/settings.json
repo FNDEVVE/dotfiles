@@ -7,16 +7,15 @@
   "permissions": {
     "defaultMode": "auto"
   },
-  "model": "opus",
   "enabledPlugins": {
-    "typescript-lsp@claude-plugins-official": true,
-    "cowork-plugin-management@synced": false,
-    "telemetry@builtin": false,
     "claude-md-management@claude-plugins-official": true,
     "cloudflare@claude-plugins-official": true,
-    "taste-skill@taste-skill": true,
+    "cowork-plugin-management@synced": false,
     "interfaces@local-desktop-app-uploads": true,
-    "plannotator@plannotator": true
+    "plannotator@plannotator": true,
+    "taste-skill@taste-skill": true,
+    "telemetry@builtin": false,
+    "typescript-lsp@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "plannotator": {
@@ -27,8 +26,10 @@
     }
   },
   "tui": "fullscreen",
+  "skipDangerousModePermissionPrompt": true,
   "skipWorkflowUsageWarning": true,
   "theme": "auto",
   "autoCompactEnabled": false,
-  "switchModelsOnFlag": false
+  "switchModelsOnFlag": false,
+  "model": "opus"
 }

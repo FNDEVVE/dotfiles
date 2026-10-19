@@ -3,13 +3,13 @@ modelRoles:
   plan: muse-code/muse-wonder-1.0-contributor:auto
   slow: zai/glm-5.3:max
   task: muse-code/muse-wonder-1.0-contributor:auto
-  worker_alt: zai/glm-5.3:auto
+  worker_alt: google-antigravity/gemini-4-argon:auto
   second_opinion: zai/glm-5.3:max
   advisor: zai/glm-5.3:high
-  smol: zai/glm-5.3-flashx:low
-  reader_fast: zai/glm-5.3-flashx:low
-  reader_cheap: zai/glm-5.3-flashx:low
-  writer_cheap: zai/glm-5.3-flashx:auto
+  smol: zai/glm-5.3-flash:low
+  reader_fast: zai/glm-5.3-flash:low
+  reader_cheap: zai/glm-5.3-flash:low
+  writer_cheap: zai/glm-5.3-flash:auto
   vision: muse-code/muse-wonder-1.0-contributor:medium
 
 cycleOrder:
@@ -28,7 +28,10 @@ task:
 
 retry:
   fallbackChains:
+    muse-code/muse-wonder-1.0-contributor:
+      - google-antigravity/gemini-4-argon:auto
+      - zai/glm-5.3-flash:low
     merge/*:
       - muse-code/muse-wonder-1.0-contributor:high
-      - zai/glm-5.3-flashx
+      - zai/glm-5.3-flash
       - google-antigravity/gemini-3.8-flash
