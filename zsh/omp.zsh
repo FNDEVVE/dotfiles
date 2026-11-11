@@ -1,10 +1,5 @@
-alias omp-a='command omp --config ~/.omp/cfg/anthropic.yml'
-alias omp-g='command omp --config ~/.omp/cfg/gpt.yml'
-alias omp-fast='command omp --config ~/.omp/cfg/fast.yml'
+alias omp-gemini='command omp --config ~/.omp/cfg/gemini.yml'
 alias omp-cyber='command omp --config ~/.omp/cfg/cyber.yml'
-alias omp-game='command omp --config ~/.omp/cfg/game.yml'
-alias omp-muse='command omp --config ~/.omp/cfg/muse.yml'
-alias omp-argon='command omp --config ~/.omp/cfg/argon.yml'
-alias omp-glm='command omp --config ~/.omp/cfg/glm.yml'
+alias omp-free='command omp --config ~/.omp/cfg/free.yml'
 
 alias claude-cpa='command claude --settings ~/.claude/cpa.json'

@@ -1,0 +1,23 @@
+# High-quota setup: GLM coding plan + MiMo 2.6 + Haiku.
+modelRoles:
+  default: zai/glm-5.3:auto
+  task: zai/glm-5.3:auto
+  plan: zai/glm-5.3:max
+  slow: zai/glm-5.3:max
+  smol: zai/glm-5.3-flash:low
+  advisor: opencode-go/hy4
+  second_opinion: opencode-go/mimo-v2.6-pro
+  worker_alt: opencode-go/mimo-v2.6-pro
+  vision: zai/glm-5.3-flash
+  reader_cheap: opencode-go/mimo-v2.6-flash
+  tiny: anthropic/claude-haiku-5-5:low
+  commit: anthropic/claude-haiku-5-5:low
+  reader_fast: anthropic/claude-haiku-5-5:low
+  writer_cheap: anthropic/claude-haiku-5-5:low
+retry:
+  fallbackChains:
+    opencode-go/mimo-v2.6-pro:
+      - zai/glm-5.3
+    zai/glm-5.3:
+      - opencode-go/glm-5.3
+      - ollama-cloud/glm-5.3

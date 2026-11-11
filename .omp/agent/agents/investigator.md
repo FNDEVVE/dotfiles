@@ -1,7 +1,7 @@
 ---
 name: investigator
-description: Relentless read-only investigator on the second-opinion model (GPT-6.1 Sol). Use to root-cause a bug, explain why a behavior happens, map exactly which files and call sites a change must touch and why, or verify a claim before acting on it. Give it one scoped question; it returns an evidence-backed verdict and never edits.
-model: ["@second_opinion", "@slow"]
+description: Relentless read-only investigator on the second-opinion model. Use to root-cause a bug, explain why a behavior happens, map exactly which files and call sites a change must touch and why, or verify a claim before acting on it. Give it one scoped question; it returns an evidence-backed verdict and never edits.
+model: ["@second_opinion", "@default"]
 tools: read, find, grep, glob, ast_grep, lsp, bash, web_search
 spawns: scout
 read-summarize: false

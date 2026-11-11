@@ -1,0 +1,9 @@
+modelRoles:
+  default: google-antigravity/gemini-4-argon:medium
+  task: google-antigravity/gemini-4-argon:medium
+  plan: google-antigravity/gemini-4-carbon:high,google-antigravity/gemini-4-carbon-high
+  slow: google-antigravity/gemini-4-carbon:high,google-antigravity/gemini-4-carbon-high
+  smol: google-antigravity/gemini-4-argon:low
+  advisor: anthropic/claude-opus-5-5:medium
+  second_opinion: anthropic/claude-opus-5-5:auto
+  worker_alt: anthropic/claude-fable-5-2:high

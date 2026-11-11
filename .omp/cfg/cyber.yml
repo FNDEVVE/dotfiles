@@ -1,12 +1,22 @@
+# Models with 0% cyber safety blocks on the Artificial Analysis Cyber Index.
+# No Anthropic/Google/Qwen: they block most cyber work.
 modelRoles:
-  default: opencode-go/deepseek-v4.1-flash:auto
-  plan: zai/glm-5.3:auto
-  slow: zai/glm-5.3:auto
-  task: opencode-go/deepseek-v4.1-flash:auto
-  worker_alt: muse-code/muse-wonder-1.0-contributor
-cycleOrder:
-  - default
-  - slow
-  - task
-  - worker_alt
-  - smol
+  default: opencode-go/deepseek-v4.1-flash:max
+  task: opencode-go/deepseek-v4.1-flash:high
+  plan: opencode-go/kimi-k3.1-pro:max
+  slow: opencode-go/kimi-k3.1-pro:max
+  advisor: opencode-go/hy4
+  second_opinion: opencode-go/mimo-v2.6-pro
+  worker_alt: opencode-go/mimo-v2.6-pro
+  smol: zai/glm-5.3-flash
+  tiny: zai/glm-5.3-flash
+  commit: zai/glm-5.3-flash
+  vision: zai/glm-5.3-flash
+  reader_fast: zai/glm-5.3-flash
+  reader_cheap: zai/glm-5.3-flash
+  writer_cheap: zai/glm-5.3-flash
+retry:
+  fallbackChains:
+    opencode-go/kimi-k3.1-pro:
+      - ollama-cloud/kimi-k3.1-pro
+      - opencode-go/mimo-v2.6-pro:high

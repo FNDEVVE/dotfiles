@@ -1,4 +1,4 @@
-setupVersion: 2
+setupVersion: 3
 symbolPreset: nerd
 theme:
   dark: dark-lavender
@@ -10,29 +10,26 @@ followUpMode: all
 interruptMode: wait
 doubleEscapeAction: tree
 modelRoles:
-  default: anthropic/claude-opus-5-5:medium
-  plan: anthropic/claude-fable-5-1:auto
-  slow: anthropic/claude-opus-5-5:auto
+  default: anthropic/claude-opus-5-5:auto
+  plan: anthropic/claude-fable-5-2:high
+  slow: anthropic/claude-fable-5-2:high
   task: anthropic/claude-opus-5-5:auto
   smol: anthropic/claude-sonnet-5-5:auto
+  writer_cheap: anthropic/claude-sonnet-5-5:auto
   tiny: anthropic/claude-haiku-5-5:auto
   vision: anthropic/claude-haiku-5-5:auto
   commit: anthropic/claude-haiku-5-5:auto
-  advisor: openai-codex/gpt-6.1-sol:high
-  web: web/exa
-  judge: typesafe/jev-latest
   reader_fast: anthropic/claude-haiku-5-5:auto
   reader_cheap: opencode-go/deepseek-v4.1-flash:low
-  writer_cheap: anthropic/claude-haiku-5-5:auto
-  worker_alt: google-antigravity/gemini-4-argon:auto
-  second_opinion: google-antigravity/gemini-4-argon:auto
+  advisor: google-antigravity/gemini-4-argon:medium
+  worker_alt: google-antigravity/gemini-4-carbon:medium,google-antigravity/gemini-4-carbon-medium
+  second_opinion: google-antigravity/gemini-4-carbon:high,google-antigravity/gemini-4-carbon-high
+  web: web/exa
+  judge: typesafe/jev-latest
 cycleOrder:
   - default
-  - plan
   - slow
-  - task
   - worker_alt
-  - smol
 task:
   eager: always
   maxRecursionDepth: -1
@@ -58,83 +55,52 @@ providers:
     slowMode: auto
   maxInFlightRequests:
     zai: 8
-  openai-codex:
-    codeMode: auto
 retry:
+  rateLimitWalksChain: true
   fallbackChains:
-    google-antigravity/gemini-4-argon:
-      - opencode-go/gemini-4-argon-contributor
+    anthropic/claude-fable-5-2:
       - anthropic/claude-opus-5-5
-    anthropic/claude-opus-5-5:
-      - muse-code/muse-wonder-1.0-contributor
-      - anthropic/claude-fable-5-1
-      - google-antigravity/gemini-4-argon
-      - openai-codex/gpt-6-astra
+      - google-antigravity/claude-opus-5-5:high
       - anthropic/claude-sonnet-5-5
-      - zai/glm-5.3
-    anthropic/claude-fable-5-1:
-      - muse-code/muse-wonder-full-1.0-contributor:max
-      - anthropic/claude-opus-5-5
+    anthropic/claude-opus-5-5:
+      - google-antigravity/claude-opus-5-5:high
+      - anthropic/claude-sonnet-5-5
       - google-antigravity/gemini-4-argon:high
-      - openai-codex/gpt-6-astra
-      - zai/glm-5.3
     anthropic/claude-sonnet-5-5:
-      - muse-code/muse-wonder-1.0-contributor
-      - google-antigravity/gemini-4-argon
-      - openai-codex/gpt-6.1-sol
+      - google-antigravity/claude-sonnet-5-5:high
+      - anthropic/claude-haiku-5-5
       - zai/glm-5.3
     anthropic/claude-haiku-5-5:
       - google-antigravity/gemini-3.8-flash
-      - opencode-go/deepseek-v4.1-flash:low
-    openai-codex/gpt-6-astra:
-      - muse-code/muse-wonder-1.0-contributor:high
-      - google-antigravity/gemini-4-argon:auto
+      - zai/glm-5.3-flash
+    google-antigravity/gemini-4-argon:
+      - opencode-go/gemini-4-argon
       - anthropic/claude-opus-5-5
-      - zai/glm-5.3
-    openai-codex/gpt-6.1-sol:
-      - google-antigravity/gemini-4-argon:auto
+    google-antigravity/gemini-4-carbon-low:
+      - google-antigravity/gemini-4-argon:high
+      - opencode-go/kimi-k3.1-pro:high
       - anthropic/claude-opus-5-5
-      - anthropic/claude-sonnet-5-5
-      - zai/glm-5.3
+    google-antigravity/gemini-4-carbon-medium:
+      - google-antigravity/gemini-4-argon:high
+      - opencode-go/kimi-k3.1-pro:high
+      - anthropic/claude-opus-5-5
+    google-antigravity/gemini-4-carbon-high:
+      - google-antigravity/gemini-4-argon:high
+      - opencode-go/kimi-k3.1-pro:high
+      - anthropic/claude-opus-5-5
     google-antigravity/gemini-3.8-flash:
       - opencode-go/deepseek-v4.1-flash:low
-      - muse-code/muse-wonder-1.0-contributor
-      - zai/glm-5.3-flashx:auto
-      - zai/glm-5.3-flash:auto
-    merge/*:
-      - anthropic/claude-opus-5-5
-      - google-antigravity/gemini-4-argon:auto
-      - anthropic/claude-sonnet-5-5
-      - openai-codex/gpt-6.1-sol
-      - muse-code/muse-wonder-1.0-contributor
-      - zai/glm-5.3-flashx
       - zai/glm-5.3-flash
-      - google-antigravity/gemini-3.8-flash
     opencode-go/deepseek-v4.1-flash:
       - ollama-cloud/deepseek-v4.1-flash
-      - merge/deepseek-v4.1-flash-merge-particle
-      - muse-code/muse-wonder-1.0-contributor
-      - google-antigravity/gemini-4-argon
-      - openai-codex/gpt-6.1-sol
-      - zai/glm-5.3-flashx
       - zai/glm-5.3-flash
-      - google-antigravity/gemini-3.8-flash
     zai/glm-5.3:
-      - muse-code/muse-wonder-1.0-contributor
-      - google-antigravity/gemini-4-argon:auto
-      - openai-codex/gpt-6.1-sol
+      - opencode-go/glm-5.3
+      - ollama-cloud/glm-5.3
       - anthropic/claude-sonnet-5-5
-      - zai/glm-5.3-flashx:max
-      - zai/glm-5.3-flash:max
-      - google-antigravity/gemini-3.8-flash
     zai/glm-5.3-flash:
-      - google-antigravity/gemini-3.8-flash
+      - opencode-go/glm-5.3-flash
       - ollama-cloud/glm-5.3-flash
-      - opencode-go/deepseek-v4.1-flash
-    zai/glm-5.3-flashx:
-      - google-antigravity/gemini-3.8-flash
-      - ollama-cloud/glm-5.3-flash
-      - opencode-go/deepseek-v4.1-flash
     judge:
       - typesafe/jev-preview
       - openrouter/~typesafe/jev-latest
@@ -201,11 +167,12 @@ browser:
 plan:
   autosave: true
   autosaveDir: ~/Desktop/OMPPP
-textVerbosity: low
 find:
   enabled: "on"
 claudeResets:
-  autoRedeem: "no"
+  autoRedeem5h: "no"
+  autoRedeemWeekly: "no"
+  autoRedeemFable: "no"
 disabledProviders:
   - claude-plugins
   - agent-plugins
@@ -214,15 +181,13 @@ disabledProviders:
   - claude
   - builtin-defaults
   - omp-managed
-tui:
-  codexResetFireworks: true
 emojiAutocomplete: false
 recap:
   idleSeconds: 600
 eval:
   autoBackground:
     enabled: true
-codexResets:
-  autoRedeem: "no"
 bash:
   gitGuard: true
+update:
+  auto: true

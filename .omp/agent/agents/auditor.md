@@ -1,7 +1,7 @@
 ---
 name: auditor
-description: Deep read-only audit of existing code (not a diff) on the second-opinion model (GPT-6.1 Sol). Use to find dead or unreachable code, duplicated or parallel implementations, broken invariants, swallowed errors, stale docs and config, and improvement opportunities ranked by payoff. Scope it to a directory, subsystem, or concern.
-model: ["@second_opinion", "@slow"]
+description: Deep read-only audit of existing code (not a diff) on the second-opinion model. Use to find dead or unreachable code, duplicated or parallel implementations, broken invariants, swallowed errors, stale docs and config, and improvement opportunities ranked by payoff. Scope it to a directory, subsystem, or concern.
+model: ["@second_opinion", "@default"]
 tools: read, find, grep, glob, ast_grep, lsp, bash
 spawns: scout
 read-summarize: false
