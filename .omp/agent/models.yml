@@ -1,0 +1,15 @@
+# Workaround (omp 18.20.0): Antigravity lists Gemini 4 Hydrogen as four SKUs that
+# advertise `minimal`, which Gemini 4 rejects (400). Pin each SKU to its own level
+# so bare and suffixed selectors both send the tier in the name.
+# Remove once can1357/oh-my-pi#19070 (collapse into one gemini-4-hydrogen) ships.
+providers:
+  google-antigravity:
+    modelOverrides:
+      gemini-4-hydrogen-low:
+        thinking: { mode: google-level, efforts: [low] }
+      gemini-4-hydrogen-medium:
+        thinking: { mode: google-level, efforts: [medium] }
+      gemini-4-hydrogen-high:
+        thinking: { mode: google-level, efforts: [high] }
+      gemini-4-hydrogen-xhigh:
+        thinking: { mode: google-level, efforts: [xhigh] }

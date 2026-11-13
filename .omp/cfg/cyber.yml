@@ -18,5 +18,4 @@ modelRoles:
 retry:
   fallbackChains:
     opencode-go/kimi-k3.1-pro:
-      - ollama-cloud/kimi-k3.1-pro
       - opencode-go/mimo-v2.6-pro:high

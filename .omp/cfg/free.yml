@@ -1,23 +1,46 @@
-# High-quota setup: GLM coding plan + MiMo 2.6 + Haiku.
+# 24/7 low-stakes research. Everything except Anthropic.
+# Gemini 4 Hydrogen leads; when the Antigravity Gemini quota runs out the
+# chains spill over to the GLM Coding Plan and OpenCode Go.
+disabledProviders:
+  - claude-plugins
+  - agent-plugins
+  - opencode
+  - codex
+  - claude
+  - builtin-defaults
+  - omp-managed
+  - ollama-cloud
+  - ollama
+  - anthropic
 modelRoles:
-  default: zai/glm-5.3:auto
-  task: zai/glm-5.3:auto
-  plan: zai/glm-5.3:max
-  slow: zai/glm-5.3:max
-  smol: zai/glm-5.3-flash:low
-  advisor: opencode-go/hy4
-  second_opinion: opencode-go/mimo-v2.6-pro
+  default: google-antigravity/gemini-4-hydrogen:high,google-antigravity/gemini-4-hydrogen-high
+  task: google-antigravity/gemini-4-hydrogen:high,google-antigravity/gemini-4-hydrogen-high
+  plan: google-antigravity/gemini-4-hydrogen:xhigh,google-antigravity/gemini-4-hydrogen-xhigh
+  slow: google-antigravity/gemini-4-hydrogen:xhigh,google-antigravity/gemini-4-hydrogen-xhigh
+  vision: google-antigravity/gemini-4-hydrogen:medium,google-antigravity/gemini-4-hydrogen-medium
+  advisor: zai/glm-5.3:high
+  second_opinion: opencode-go/kimi-k3.1-pro:high
   worker_alt: opencode-go/mimo-v2.6-pro
-  vision: zai/glm-5.3-flash
+  smol: opencode-go/deepseek-v4.1-flash:low
+  writer_cheap: opencode-go/deepseek-v4.1-flash:low
+  tiny: zai/glm-5.3-flash:low
+  commit: zai/glm-5.3-flash:low
+  reader_fast: zai/glm-5.3-flash:low
   reader_cheap: opencode-go/mimo-v2.6-flash
-  tiny: anthropic/claude-haiku-5-5:low
-  commit: anthropic/claude-haiku-5-5:low
-  reader_fast: anthropic/claude-haiku-5-5:low
-  writer_cheap: anthropic/claude-haiku-5-5:low
 retry:
   fallbackChains:
-    opencode-go/mimo-v2.6-pro:
-      - zai/glm-5.3
+    google-antigravity/gemini-4-hydrogen-medium:
+      - zai/glm-5.3-flash:high
+      - opencode-go/mimo-v2.6-pro
+    google-antigravity/gemini-4-hydrogen-high: &spill
+      - opencode-go/mimo-v2.6-pro
+      - zai/glm-5.3:high
+      - opencode-go/deepseek-v4.1-flash:high
+    google-antigravity/gemini-4-hydrogen-xhigh: *spill
     zai/glm-5.3:
       - opencode-go/glm-5.3
-      - ollama-cloud/glm-5.3
+      - opencode-go/deepseek-v4.1-flash:high
+    opencode-go/kimi-k3.1-pro:
+      - opencode-go/mimo-v2.6-pro
+    opencode-go/mimo-v2.6-pro:
+      - zai/glm-5.3:high
