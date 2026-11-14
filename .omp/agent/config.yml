@@ -14,16 +14,16 @@ modelRoles:
   plan: anthropic/claude-fable-5-2:high
   slow: anthropic/claude-fable-5-2:high
   task: anthropic/claude-opus-5-5:auto
-  smol: google-antigravity/gemini-4-hydrogen:high,google-antigravity/gemini-4-hydrogen-high
-  writer_cheap: google-antigravity/gemini-4-hydrogen:high,google-antigravity/gemini-4-hydrogen-high
+  smol: opencode-go/deepseek-v4.1-flash:high
+  writer_cheap: opencode-go/deepseek-v4.1-flash:high
   tiny: anthropic/claude-haiku-5-5:auto
-  vision: google-antigravity/gemini-4-hydrogen:medium,google-antigravity/gemini-4-hydrogen-medium
+  vision: anthropic/claude-haiku-5-5:auto
   commit: anthropic/claude-haiku-5-5:auto
-  reader_fast: google-antigravity/gemini-4-hydrogen:medium,google-antigravity/gemini-4-hydrogen-medium
+  reader_fast: opencode-go/deepseek-v4.1-flash:high
   reader_cheap: opencode-go/deepseek-v4.1-flash:low
-  advisor: google-antigravity/gemini-4-hydrogen:high,google-antigravity/gemini-4-hydrogen-high
-  worker_alt: google-antigravity/gemini-4-carbon:medium
-  second_opinion: google-antigravity/gemini-4-carbon:high
+  advisor: opencode-go/deepseek-v4.1-flash:high
+  worker_alt: opencode-go/gemini-4-argon:medium
+  second_opinion: opencode-go/gemini-4-argon:high
   web: web/exa
   judge: typesafe/jev-latest
 cycleOrder:
@@ -60,41 +60,21 @@ retry:
   fallbackChains:
     anthropic/claude-fable-5-2:
       - anthropic/claude-opus-5-5
-      - google-antigravity/claude-opus-5-5:high
       - anthropic/claude-sonnet-5-5
     anthropic/claude-opus-5-5:
-      - google-antigravity/claude-opus-5-5:high
       - anthropic/claude-sonnet-5-5
-      - google-antigravity/gemini-4-argon:high
+      - opencode-go/gemini-4-argon:high
     anthropic/claude-sonnet-5-5:
-      - google-antigravity/claude-sonnet-5-5:high
       - anthropic/claude-haiku-5-5
-      - zai/glm-5.3
+      - opencode-go/deepseek-v4.1-flash:high
     anthropic/claude-haiku-5-5:
-      - google-antigravity/gemini-4-hydrogen-low
+      - opencode-go/claude-haiku-5-5
       - zai/glm-5.3-flash
-    google-antigravity/gemini-4-argon:
-      - opencode-go/gemini-4-argon
-      - anthropic/claude-opus-5-5
-    google-antigravity/gemini-4-carbon:
-      - google-antigravity/gemini-4-hydrogen-high
-      - google-antigravity/gemini-4-argon:high
-      - anthropic/claude-opus-5-5
-    # Hydrogen SKUs: rename to google-antigravity/gemini-4-hydrogen once
-    # can1357/oh-my-pi#19070 ships (and delete models.yml).
-    google-antigravity/gemini-4-hydrogen-high:
-      - anthropic/claude-sonnet-5-5
-      - opencode-go/gemini-4-argon:medium
-    google-antigravity/gemini-4-hydrogen-medium:
-      - anthropic/claude-haiku-5-5
-      - zai/glm-5.3-flash
-    google-antigravity/gemini-4-hydrogen-low:
-      - zai/glm-5.3-flash
+    opencode-go/gemini-4-argon:
+      - opencode-go/deepseek-v4.1-flash:max
     opencode-go/deepseek-v4.1-flash:
+      - opencode-go/mimo-v2.6-pro
       - zai/glm-5.3-flash
-    zai/glm-5.3:
-      - opencode-go/glm-5.3
-      - anthropic/claude-sonnet-5-5
     zai/glm-5.3-flash:
       - opencode-go/glm-5.3-flash
     judge:
@@ -178,6 +158,7 @@ disabledProviders:
   - builtin-defaults
   - omp-managed
   - ollama-cloud
+  - google-antigravity
   - ollama
 emojiAutocomplete: false
 recap:

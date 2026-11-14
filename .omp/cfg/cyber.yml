@@ -3,9 +3,9 @@
 modelRoles:
   default: opencode-go/deepseek-v4.1-flash:max
   task: opencode-go/deepseek-v4.1-flash:high
-  plan: opencode-go/kimi-k3.1-pro:max
-  slow: opencode-go/kimi-k3.1-pro:max
-  advisor: opencode-go/hy4
+  plan: opencode-go/deepseek-v4.1-flash:max
+  slow: opencode-go/deepseek-v4.1-flash:max
+  advisor: opencode-go/deepseek-v4.1-flash:high
   second_opinion: opencode-go/mimo-v2.6-pro
   worker_alt: opencode-go/mimo-v2.6-pro
   smol: zai/glm-5.3-flash
@@ -15,7 +15,3 @@ modelRoles:
   reader_fast: zai/glm-5.3-flash
   reader_cheap: zai/glm-5.3-flash
   writer_cheap: zai/glm-5.3-flash
-retry:
-  fallbackChains:
-    opencode-go/kimi-k3.1-pro:
-      - opencode-go/mimo-v2.6-pro:high
